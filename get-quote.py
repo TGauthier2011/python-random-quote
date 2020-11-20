@@ -1,9 +1,15 @@
+# Import random module
+import random
+
 def main():
   f = open("quotes.txt")
   quotes = f.readlines()
   f.close()
+  # Using random to select a quote
+  last = len(quotes) - 1
+  rnd = random.randint(0, last)
 
-  print(quotes[0])
+  print(quotes[rnd])
 
 if __name__== "__main__":
   main()
